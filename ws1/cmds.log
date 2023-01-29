@@ -1,0 +1,67 @@
+    1  pwd
+    2  ls
+    3  pwd
+    4  ls
+    5  ls -l
+    6  ls ad*
+    7  cd Source/
+    8  ls
+    9  cd Repos/
+   10  ls
+   11  pwd
+   12  cd
+   13  pwd
+   14  pwd
+   15  cd Source/Repos/
+   16  pwd
+   17  touch sample.txt
+   18  view sample.txt
+   19  vi sample.txt
+   20  ls
+   21  ls -l
+   22  git status
+   23  git init
+   24  ls
+   25  git status
+   26  git add sample.txt
+   27  exit
+   28  cd Source/Repos/
+   29  git init
+   30  touch sample.txt
+   31  ls
+   32  git status
+   33  git status
+   34  git add sample.txt
+   35  git status
+   36  git commit -m "Your message about the commit"
+   37  git config
+   38  git config --global
+   39  history
+   40  git commit -m "Your message about the commit"
+   41  git config --global user.email "sugahara.hazuki@gmail.com"
+   42  git config --global user.name "Hkumasu"
+   43  git commit -m "Your message about the commit"
+   44  git checkout -b branch1
+   45  git branch
+   46  git checkout -b master
+   47  git remote add origin https://github.com/Hkumasu/Repos.git
+   48  git push -u origin master
+   49  git status
+   50  pwd
+   51  ls
+   52  git remote add origin https://github.com/Hkumasu/Repos.git
+   53  git push -u origin master
+   54  git remote add orign https://github.com/Hkumasu/cs131.git
+   55  git push -u origin master
+   56  git remote add origin https://github.com/Hkumasu/cs131.git
+   57  git push origin branch1
+   58  git remote rm origin https://github.com/Hkumasu/Repos.git
+   59  git remote rm origin
+   60  git remote add origin https://github.com/Hkumasu/cs131.git
+   61  git push origin branch1
+   62  git pull origin master
+   63  git pull origin main
+   64  ls
+   65  view sample.txt 
+   66  history
+   67  history > cmds.log
