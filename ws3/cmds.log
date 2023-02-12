@@ -1,0 +1,49 @@
+  319  ls
+  320  grep -h -E $'(.*\t){11}' amazon_reviews_us_Books_v1_02.tsv
+  321  grep -h -E $'(.*\t){11}Y\t' amazon_reviews_us_Books_v1_02.tsv
+  322  grep -E $'(.*\t){11}Y\t' amazon_reviews_us_Books_v1_02.tsv | grep -h
+  323  grep -E $'(.*\t){11}Y\t' amazon_reviews_us_Books_v1_02.tsv | cut  amazon_reviews_us_Books_v1_02.tsv >> mostReview.txt
+  324  head -n 2 amazon_reviews_us_Books_v1_02.tsv
+  325  grep -E $'(.*\t){10}' amazon_reviews_us_Books_v1_02.tsv
+  326  head -n 2 amazon_reviews_us_Books_v1_02.tsv
+  327* grep -E $'(.*\t){10}Y\t' amazon_reviews_us_Books_v1_02.tsv
+  328  cat -E $(.*\t){11}Y\t' 
+  329  cat -E $(.*\t){11}Y\t' amazon_reviews_us_Books_v1_02.tsv
+  330  cat -c $(.*\t){11}Y\t' amazon_reviews_us_Books_v1_02.tsv
+  331  cat -c amazon_reviews_us_Books_v1_02.tsv
+  332  cat --help
+  333  cat -t amazon_reviews_us_Books_v1_02.tsv
+  334  grepgrepexit
+  335  grep -E $'(.*\t){11}Y\t' amazon_reviews_us_Books_v1_02.tsv >> review.txt
+  336  vi review.txt
+  337  cut -c '(.*\t){11}Y\t' amazon_reviews_us_Books_v1_02.tsv > review.txt
+  338  cut --help
+  339  cut -s $'(.*\t){11}Y\t' amazon_reviews_us_Books_v1_02.tsv >> review.tx
+  340  exit
+  341  head -n 2 amazon_reviews_us_Books_v1_02.tsv
+  342  grep -E $'(.*\t){9}\d' amazon_reviews_us_Books_v1_02.tsv
+  343  grep -E $'(.*\t){9}' amazon_reviews_us_Books_v1_02.tsv
+  344  grep -E $'(.*\t){11}Y\t' amazon_reviews_us_Books_v1_02.tsv
+  345  grep -E $'(.*\t){9}Y\t' amazon_reviews_us_Books_v1_02.tsv
+  346  cut -f 9 -d '\t' amazon_reviews_us_Books_v1_02.tsv
+  347  cut -f 9 -d "\t" amazon_reviews_us_Books_v1_02.tsv
+  348  cut -f 9 amazon_reviews_us_Books_v1_02.tsv
+  349  sort -k9 -r amazon_reviews_us_Books_v1_02.tsv
+  350  sort -k9 -r amazon_reviews_us_Books_v1_02.tsv|head 3
+  351  sort -k9 -r amazon_reviews_us_Books_v1_02.tsv|head -n3
+  352  head -n 2 amazon_reviews_us_Books_v1_02.tsv
+  353  sort -k10 amazon_reviews_us_Books_v1_02.tsv|head -n3
+  354  sort -k10 -r amazon_reviews_us_Books_v1_02.tsv|head -n3
+  355  sort -k10 -t '\t' amazon_reviews_us_Books_v1_02.tsv|head -n3
+  356  sort -k10 -t $'\t' amazon_reviews_us_Books_v1_02.tsv|head -n3
+  357  sort -k10 -t $'\t' -r  amazon_reviews_us_Books_v1_02.tsv|head -n3
+  358  sort -k10,10 -t $'\t' -r  amazon_reviews_us_Books_v1_02.tsv|head -n3
+  359  sort -k10,10 -t $'\t' -r  amazon_reviews_us_Books_v1_02.tsv|head -n4
+  360* 
+  361  sort -k10,10 -t $'\t' -r  amazon_reviews_us_Books_v1_02.tsv|head -n4|cut -f 2,3
+  362  sort -k10,10 -t $'\t' -r  amazon_reviews_us_Books_v1_02.tsv|head -n4|cut -f 2,63
+  363  sort -k10,10 -t $'\t' -r  amazon_reviews_us_Books_v1_02.tsv|head -n4|cut -f 2,6
+  364  sort -k10,10 -t $'\t' -r  amazon_reviews_us_Books_v1_02.tsv|head -n4|cut -f 2,6 > ws3.txt
+  365  vi ws3.txt
+  366  mv ws3.txt Repos/cs131/ws3
+  367  history > cmds.log

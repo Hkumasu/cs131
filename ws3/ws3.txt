@@ -1,0 +1,4 @@
+customer_id	product_title
+19611888	Rich Dad, Poor Dad: What the Rich Teach Their Kids About Money--That the Poor and Middle Class Do Not!
+38979057	The No-Cry Sleep Solution: Gentle Ways to Help Your Baby Sleep Through the Night
+52991422	Of Pandas and People: The Central Question of Biological Origins
