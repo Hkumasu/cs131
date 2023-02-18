@@ -1,0 +1,79 @@
+  547  pwd
+  548  ls
+  549  cat .bashrc
+  550  ls
+  551  ls -a
+  552  cd Repos/cs131
+  553  ls
+  554  cd ws3
+  555  ls
+  556  cat cmds.log
+  557  cd ..
+  558  cd ws4
+  559  touch ws4.txt
+  560  ls
+  561  vi .bashric
+  562  cd ..
+  563  vi .bashric
+  564  ls -a
+  565  rm .bahric
+  566  rm .bashric
+  567  vi .bashrc
+  568  source .bashrc
+  569  vi history
+  570  ls
+  571  ls -a
+  572  history > cmds.log
+  573  vi cmds.log
+  574  l
+  575  w
+  576  ls -la
+  577  cat amazon_reviews_us_Books_v1_02.tsv
+  578  head -n 3 amazon_reviews_us_Books_v1_02.tsv
+  579  exit
+  580  ls
+  581  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+  582  head -n 2 amazon_reviews_us_Books_v1_02.tsv 
+  583  grep 0385730586 amazon_reviews_us_Books_v1_02.tsv
+  584  grep 0385730586 amazon_reviews_us_Books_v1_02.tsvgre ^Ccut -f 9 -d '\t' amazon_reviews_us_Books_v1_02.tsv > 0385730586.txt
+  585  grep 0385730586 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 -d '\t'
+  586  grep 0385730586 amazon_reviews_us_Books_v1_02.tsv | cut -f 9
+  587  grep 0385730586 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 > 0385730586.txt
+  588  vi  0385730586.txt
+  589  vi .bashrc
+  590  source .bashrc
+  591* awk '{ total += $2; count++ } END { print total/count }' fil0385730586.txt
+  592   count=0; total=0; for i in $( awk '{ print $2; }' 0385730586.txt );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+  593  awk '{ total += $2; count++ } END { print total/count }' 0385730586.txt
+  594  vi  0385730586.txt
+  595  awk '{ total += $2; count++ } END { print total }' 0385730586.txt
+  596  awk '{ total += $2; count++ } END { print count }' 0385730586.txt
+  597* awk '{ total += $1; count++ } END { print tot
+  598  awk '{ total += $1; count++ } END { print total }' 0385730586.txt
+  599   awk '{ total += $1; count++ } END { print total/count }' 0385730586.txt
+  600  awk '{ total += $1; count++ } END { print total/count }' 0385730586.txt >> 0385730586.txt
+  601  vi
+  602  vi 0385730586.txt
+  603  head -n 2 amazon_reviews_us_Books_v1_02.tsv 
+  604  grep 12076615 amazon_reviews_us_Books_v1_02.tsv | cut -f 9
+  605  grep 12076615 amazon_reviews_us_Books_v1_02.tsv
+  606  head -n 5 amazon_reviews_us_Books_v1_02.tsv 
+  607  grep 12257412 amazon_reviews_us_Books_v1_02.tsv
+  608  cat amazon_reviews_us_Books_v1_02.tsv
+  609  grep 12443612 amazon_reviews_us_Books_v1_02.tsv
+  610  grep 12443612 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 > 12443612.txt
+  611  awk '{ total += $1; count++ } END { print total/count }' 12443612.txt
+  612  awk '{ total += $1; count++ } END { print total/count }' 12443612.txt >> 12443612.txt
+  613  vi 12443612.txt
+  614  mv 12443612.txt Repos/cs131/ws4/CUSTOMERS/
+  615  mv 0385730586.txt Repos/cs131/ws4/PRODUCTS/
+  616  cd Repos/cs131/ws4
+  617  ls
+  618  cd CUSTOMERS
+  619  LS
+  620  ls
+  621  cat 12443612.txt
+  622  cd ..
+  623  cd PRODUCTS
+  624  ls
+  625  cat 0385730586.txt
