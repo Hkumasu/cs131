@@ -1,0 +1,181 @@
+Script started on 2023-02-24 01:15:36-05:00
+bash: cd: a1: No such file or directory
+bash-4.4$ ls
+a1.txt	capture.txt  temp
+bash-4.4$ cat a1.txt
+-bash: cd: temp: Permission denied
+bash-4.4$ vi [K[K[Ka[Kcat a1.txt
+[200~Q1: /mnt/scratch/hazuki23sp
+command: echo $HOME
+
+Q2: hazuki23sp:x:1053:1055::/mnt/scratch/hazuki23sp:/bin/bash
+cat /etc/passwd | grep hazuki
+
+Q3: result
+cd -bash: cd: temp: Permission denied
+
+bash-4.4$ ls -l temp
+total 0
+bash-4.4$ ls -l temp >> a1.txt 
+
+total 0
+bash-4.4$ mkdir temp2
+bash-4.4$ ls
+a1.txt	capture.txt  temp  temp2
+bash-4.4$ touch sample.txt
+touch: cannot touch 'temp/sample.txt': Permission denied
+bash-4.4$ touch temp/sample.txt >> a1.txt
+touch: cannot touch 'temp/sample.txt': Permission denied
+bash-4.4$ touch temp/sample.txt >> a1.txt
+bash-4.4$ mv temp2 temp3
+bash-4.4$ ls
+a1.txt	capture.txt  temp  temp3
+bash-4.4$ cd te[K[K[K[Kp [K[K[Kcp te[K[K[K a1 temp3 
+cp: cannot stat 'a1': No such file or directory
+bash-4.4$ cp ../a1 temp3/[C[C[C[C[C[C[C
+cp: -r not specified; omitting directory '../a1'
+bash-4.4$ cp -r ../1[Ka1 temps[K3/
+cp: cannot copy a directory, '../a1', into itself, 'temp3/a1'
+bash-4.4$ cp -r ../a1 temp3/ 
+bash-4.4$ ls /proc/*cpu* >> a1.txt
+/proc/cpuinfo
+bash-4.4$ ls /proc/*cpu* >> a1.txt
+/proc/iomem  /proc/meminfo
+bash-4.4$ cat [K[K[K[Khead /proc/memoinfo
+head: cannot open '/proc/memoinfo' for reading: No such file or directory
+bash-4.4$ head /proc/memoinfo[1Pinfo
+MemTotal:       73080640 kB
+MemFree:         7767744 kB
+MemAvailable:   15038848 kB
+Buffers:          411072 kB
+Cached:         11326720 kB
+SwapCached:       105280 kB
+Active:          8899648 kB
+Inactive:        3460416 kB
+Active(anon):    2725888 kB
+Inactive(anon):  1540224 kB
+bash-4.4$ head /proc/meminfo >> a1.txt
+bash-4.4$ ca[K[Ktai[K[K[K cat /proc[K[K[K[K[K[K[K[K[K head /proc/cpuinfo
+processor	: 0
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 1
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+bash-4.4$ tail /proc/cpuinfo 
+processor	: 255
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+timebase	: 512000000
+platform	: pSeries
+model		: IBM,8286-42A
+machine		: CHRP IBM,8286-42A
+MMU		: Hash
+bash-4.4$ tail /proc/cpuinfo >> a1.txt
+bash-4.4$ ca[K[K via[K a1.txt
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;66r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[66;1H"a1.txt" 39L, 1054C[1;1H[200~Q1: /mnt/scratch/hazuki23sp
+command: echo $HOME
+
+Q2: hazuki23sp:x:1053:1055::/mnt/scratch/hazuki23sp:/bin/bash
+cat /etc/passwd | grep hazuki
+
+Q3: result
+cd -bash: cd: temp: Permission denied
+
+total 0
+touch: cannot touch 'temp/sample.txt': Permission denied
+
+Q5:I could change the directory name from "temp2" to "temp3"
+In general, we can copy a directory to another directory, however; temp3 cannot copy
+a1 because temp3 is under a1 directory.
+cp: cannot copy a directory, '../a1', into itself, 'temp3/a1'
+/proc/iomem
+/proc/meminfo
+/proc/cpuinfo
+MemTotal:[7C73080640 kB
+MemFree:[9C7587328 kB
+MemAvailable:   14858560 kB
+Buffers:[10C411072 kB
+Cached:[9C11328640 kB
+SwapCached:[7C105280 kB
+Active:[10C8898944 kB
+Inactive:[8C3612160 kB
+Active(anon):    2725184 kB
+Inactive(anon):  1691840 kB
+processor[7C: 255
+cpu[13C: POWER8 (architected), altivec supported
+clock[11C: 3525.000000MHz
+revision[8C: 2.1 (pvr 004b 0201)
+
+timebase[8C: 512000000
+platform[8C: pSeries
+model[11C: IBM,8286-42A
+machine[9C: CHRP IBM,8286-42A
+MMU[13C: Hash
+
+exit
+
+Script done on 2023-02-24 02:02:24-05:00
+Script started on 2023-02-25 01:02:05-05:00
+bash-4.4$ pwd
+/mnt/scratch/hazuki23sp/a1
+bash-4.4$ ls /home/test/A1/downloaded_hashtags_extend.csv
+/home/test/A1/downloaded_hashtags_extend.csv
+bash-4.4$ cp /home/test/A1/downloaded_hashtags_extend.csv .
+bash-4.4$ ls 
+a1.txt	capture2.txt  capture.txt  downloaded_hashtags_extend.csv  temp  temp3
+bash-4.4$ ls -l
+total 7692
+-rw-rw-r-- 1 hazuki23sp hazuki23sp     810 Feb 24 02:02 a1.txt
+-rw-rw-r-- 1 hazuki23sp hazuki23sp       0 Feb 25 01:02 capture2.txt
+-rw-rw-r-- 1 hazuki23sp hazuki23sp   35975 Feb 24 02:02 capture.txt
+-rw-r--r-- 1 hazuki23sp hazuki23sp 7822180 Feb 25 01:05 downloaded_hashtags_extend.csv
+drw-rw-r-- 2 hazuki23sp hazuki23sp    4096 Feb 24 01:06 temp
+drwxrwxr-x 3 hazuki23sp hazuki23sp    4096 Feb 24 01:37 temp3
+bash-4.4$ du -h *
+4.0K	a1.txt
+0	capture2.txt
+40K	capture.txt
+7.5M	downloaded_hashtags_extend.csv
+4.0K	temp
+4.0K	temp3/a1/temp3/a1/temp3
+8.0K	temp3/a1/temp3/a1
+12K	temp3/a1/temp3
+16K	temp3/a1
+20K	temp3
+bash-4.4$ du -h * >> a1.txt
+
+bash-4.4$ grep -i great downloaded_hashtags_extend.csv | wc -c >> a1.txt
+
+bash-4.4$iconv -f UTF-8 -t ASCII downloaded_hashtags_extend.csv -o downloaded_hashtags_extend_ascii.csv
+iconv: illegal input sequence at position 41776
+bash-4.4$ file downloaded_hashtags_extend_ascii.csv
+downloaded_hashtags_extend_ascii.csv: ASCII text
+bash-4.4$ diff -c file downloaded_hashtags_extend.csv downloaded_hashtags_extend_ascii.csv 
+604,110350c
+1353306974939738113,ukraine
+.
+diff: downloaded_hashtags_extend_ascii.csv: No newline at end of file
+
+bash-4.4$ diff -e downloaded_hashtags_extend.csv downloaded_hashtags_extend_ascii.csv >> a1.txt
+diff: downloaded_hashtags_extend_ascii.csv: No newline at end of file
+
+177
+bash-4.4$ sort -u -k1,1 -t "," downloaded_hashtags_extend.csv | wc -l
+64698
+bash-4.4$ sort -u -k4,4 -t "," downloaded_hashtags_extend.csv | wc -l
+20258
+bash-4.4$ sort -u -k2,2 -t "," downloaded_hashtags_extend.csv | wc -l >> a1.txt
+bash-4.4$ sort -u -k1,1 -t "," downloaded_hashtags_extend.csv | wc -l >> a1.txt
+bash-4.4$ sort -u -k4,4 -t "," downloaded_hashtags_extend.csv | wc -l >> a1.txt
+
+
+exit
+
+Script done on 2023-02-25 02:29:32-05:00
