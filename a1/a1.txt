@@ -1,0 +1,104 @@
+Q1: /mnt/scratch/hazuki23sp
+command: echo $HOME
+
+
+
+Q2: hazuki23sp:x:1053:1055::/mnt/scratch/hazuki23sp:/bin/bash
+cat /etc/passwd | grep hazuki
+
+
+
+Q3: result
+cd -bash: cd: temp: Permission denied
+ls doesn't show anything
+ls -l: total 0
+touch: cannot touch 'temp/sample.txt': Permission denied
+
+
+
+Q5:I could change the directory name from "temp2" to "temp3"
+In general, we can copy a directory to another directory, however; temp3 cannot copy
+a1 because temp3 is under a1 directory. 
+cp: cannot copy a directory, '../a1', into itself, 'temp3/a1'
+
+
+
+Q6: result for searching memory 
+/proc/iomem
+/proc/meminfo <-this one
+command: ls /proc/*mem*
+
+result for searching cpu
+/proc/cpuinfo
+command: ls /proc/*cpu*
+
+
+
+Q7
+MemTotal:   73080640 kB
+command: head /proc/meminfo
+
+
+
+Q8
+processor	: 255
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+
+
+255 processors, POWER8, 3.625 GHz.
+command: tail /proc/cpuinfo
+
+
+
+Q9: Size for the file is 0.0075 GB
+4.0K	a1.txt
+0	capture2.txt
+40K	capture.txt
+7.5M	downloaded_hashtags_extend.csv
+4.0K	temp
+4.0K	temp3/a1/temp3/a1/temp3
+8.0K	temp3/a1/temp3/a1
+12K	temp3/a1/temp3
+16K	temp3/a1
+20K	temp3
+
+This file has 110350 lines
+110350 downloaded_hashtags_extend.csv
+command:du -h *
+wc -l downloaded_hashtags_extend.csv
+
+
+
+Q10
+4582 hashtags contain
+command: grep -i great downloaded_hashtags_extend.csv | wc -c
+
+
+
+Q11
+downloaded_hashtags_extend.csv: UTF-8 Unicode text
+command: file downloaded_hashtags_extend.csv
+
+
+
+Q12
+604,110350c
+1353306974939738113,ukraine
+command: iconv -f UTF-8 -t ASCII downloaded_hashtags_extend.csv -o downloaded_hashtags_extend_ascii.csv
+diff -e downloaded_hashtags_extend.csv downloaded_hashtags_extend_ascii.csv
+
+
+
+Q13
+Unique users: 177
+Unique tweets: 64698
+Unique hashtags: 20258
+
+sort -u -k2,2 -t "," downloaded_hashtags_extend.csv | wc -l (number unique users)
+sort -u -k4,4 -t "," downloaded_hashtags_extend.csv | wc -l  (number unique tweets)
+sort -u -k1,1 -t "," downloaded_hashtags_extend.csv | wc -l (number unique hashtags)
+
+

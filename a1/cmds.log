@@ -1,0 +1,108 @@
+I don't know why but my history is so messed up. I'm really not sure why some commands were saved in history.  
+
+813  mkdir a1  <-answer for Q1
+  814  cd a1
+  815  ls
+  816  script capture.txt
+  827  cd a1
+  828  vi a1.txt
+  829  cat a1.txt
+  830  pwd
+  831  ls /proc
+  832  ls /proc/*mem*
+  833  ls /proc/mem*
+  834  ls /proc/meminfo 
+  835  ls /proc/*cpu*
+  836  cat /proc/cpuinfo
+  837  cat /proc/meminfo
+  838  exit
+  839  cd a1
+  840  ls
+  841  cat a1.txt
+  842  ls temp 
+  843  ls -l temp
+  844  ls -l temp >> a1.txt 
+  845  cat a1.txt
+  846  mkdir temp2
+  847  ls
+  848  touch temp/sample.txt >> a1.txt
+  849  touch temp/sample.txt 2>> a1.txt
+  850  mv temp2 temp3
+  851  ls
+  852  cp a1 temp3 
+  853  cp ../a1 temp3/
+  854  cp -r ../a1 temp3/
+  855  cp -r ../a1 temp3/ 2>> a1.txt
+  856  a1.txt
+  857  cat a1.txt
+  858  vi a1.txt
+  859  ls /proc/*mem* >> a1.txt  <--------------------Q6_1
+  860  ls /proc/*cpu* >> a1.txt  <--------------------Q6_2
+  861  ls /proc/*cpu*
+  862  ls /proc/*mem*
+  863  head /proc/memoinfo
+  864  head /proc/meminfo
+  865  head /proc/meminfo >> a1.txt  <-----------------Q7
+  866  head /proc/cpuinfo
+  867  tail /proc/cpuinfo  <---------------------Q8
+  868  tail /proc/cpuinfo >> a1.txt
+  869  vi a1.txt
+  870  exit
+  871  pwd
+  872  a1.txt
+  873  mv a1.txt /a1/
+  874  mv a1.txt /a1
+  875  cat a1.txt
+  876  echo $HOME
+  877  cd a1
+  878  echo $HOME >> a1.txt     <----------Q1
+  879  cat a1.txt
+  880  cat /etc/passwd
+  881  cat /etc/passwd | grep hazuki   <------------------- Q2
+  882  /etc/passwd | grep hazuki >> a1.txt
+  883  cat /etc/passwd | grep hazuki >> a1.txt
+  884  mkdir temp  <-------------------Q4_1
+  885  vim a1.txt
+  886  ls
+  887  ls -l
+  888  chmod 664 temp <-------------------------------Q4_2
+  889  ls -l <-------------------------------Q4_3
+  890  cd temp <---------------------------------------Q4_4
+  891  cd temp >> a1.txt
+  892  cat a1.txt
+  893  cd temp 2> a1.txt <------------------------Q3
+  894  script capture.txt
+  895  exit
+  896  cd
+  897  cd a1
+  898  ls
+  899  script capture2.txt
+  900  ls
+  901  mv capture.txt capture1.txt
+  902  ls
+  903  cat capture1.txt capture2.txt > capture.txt
+  904  cat capture.txt
+  905  vi capture.txt
+  906  history >> cmds.log
+
+Q5:
+mv temp2 temp3
+
+Q9: 
+du -h *
+wc -l downloaded_hashtags_extend.csv
+
+Q10:
+grep -i great downloaded_hashtags_extend.csv | wc -c
+
+Q11: 
+file downloaded_hashtags_extend_ascii.csv
+
+Q12:
+iconv -f UTF-8 -t ASCII downloaded_hashtags_extend.csv -o downloaded_hashtags_extend_ascii.csv
+diff -e downloaded_hashtags_extend.csv downloaded_hashtags_extend_ascii.csv
+
+Q13:
+sort -u -k2,2 -t "," downloaded_hashtags_extend.csv | wc -l (number unique users) 
+sort -u -k4,4 -t "," downloaded_hashtags_extend.csv | wc -l  (number unique tweets)
+sort -u -k1,1 -t "," downloaded_hashtags_extend.csv | wc -l (number unique hashtags)
