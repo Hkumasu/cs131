@@ -1,0 +1,24 @@
+    1  ls
+    2  cs Repos/cs131/ws5/CUSTOMERS
+    3  cd Repos/cs131/ws5/CUSTOMERS
+    4  vi .bashrc
+    5  source .bashrc
+    6  vi .bashrc
+    7  source .bashrc
+    8  vi .bashrc
+    9  pwd
+   10  vi .bashrc
+   11  source .bashrc
+   12  vi .bashrc
+   13  source .bashrc
+   14  ls
+   15  vi .bashrc
+   16  source .bashrc
+   17  ls
+   18  history > cmds.log
+
+cut -f 2 /mnt/scratch/hazuki23sp/amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 200 | cut -b 9- | while read line
+do
+        echo $line > "$line".txt
+done
+
