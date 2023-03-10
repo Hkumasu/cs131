@@ -1,0 +1,10 @@
+
+Script started on 2023-03-09 21:42:57-05:00
+cut: amazon_reviews_us_Books_v1_02.tsv: No such file or directory
+bash-4.4$ grep type=replied_to downloaded_tweets_extend_original_nolf2.tsv | cut  -f2 | sort | uniq -c | sort -gr | head -n 10 >> a2.txt
+bash-4.4$ grep type=replied_to downloaded_tweets_extend_original_nolf2.tsv | cut  -f5 | sort | uniq -c | sort -gr | head -n 10 >> a2.txt
+bash-4.4$ grep type=retweeted downloaded_tweets_extend_nolf2.tsv | cut -f2 | sortt | uniq -c | sort -gr | head -n 10 >> a2.txt
+bash-4.4$ cut -f4 downloaded_tweets_extend_nolf2.tsv | sort | uniq -c | sort -gr  | head -n 31 >> a2.txt
+bash-4.4$ exit
+
+Script done on 2023-03-09 21:53:05-05:00

@@ -1,0 +1,11 @@
+    1  script capture.txt
+    2  a2.txt
+    3  vi a2.txt
+    4  grep type=replied_to downloaded_tweets_extend_original_nolf2.tsv | cut -f5 | sort | uniq -c | sort -gr | head -n 10 >> a2.txt
+    5  vi a2.txt
+    6  echo a2.txt
+    7  cat a2.txt
+    8  vi a2.txt
+    9  ls
+   10  rm a2.txy
+   11  history >> cmds.log
