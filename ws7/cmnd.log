@@ -1,0 +1,23 @@
+To find head 20 verified reviews: awk -f awkws7 amazon_reviews_us_Books_v1_02.tsv | head -20 >> verified_head20.txt
+
+awkws7
+BEGIN { FS="\t" }
+{
+        if ($12 == "Y")
+        print
+}
+
+
+To find the 10 most frequent words: cut -f 13 verified_head20.txt | awk -f awkws7_2 | sort -rn | head -10 >> top10.txt
+awkws7_2
+BEGIN { FS="[^\'a-zA-Z]+" } {
+         for (i=1; i<=NF; i++) {
+             word = tolower($i)
+             words[word]++
+         }
+     }
+     END {
+         for (w in words)
+              printf("%3d %s\n", words[w], w)
+     }
+
