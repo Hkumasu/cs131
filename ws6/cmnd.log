@@ -1,0 +1,4 @@
+sed -n '/\t[YN]\tN/p' amazon_reviews_us_Books_v1_02.tsv  | head -20 >> unverified.txt
+sed -n '/1844161560/p' unverified.txt >> 1844161560.txt
+sed -r 's/[.,;]//g' 1844161560.txt > 1844161560_task5.txt
+sed -r 's/<.*>//g' 1844161560.txtsed > 1844161560_task6.txt
