@@ -1,0 +1,13 @@
+task1: grep type=replied_to downloaded_tweets_extend_nolf2.tsv | cut -f 2,6 > task1.txt
+task2: cut -f2 task1.txt | sort | uniq -c | sort -gr | awk '{if($1 > 2) print}' > task2.txt
+task3: sort -n  task2.txt | uniq -c > task2_count.txt
+	./gnuplot
+	set terminal svg
+	set output “h1.svg”
+	set style fill solid
+	plot "task2_count.txt" using 0:1:xtic(2) with boxes notitle
+
+	set output "h4.svg"
+	set style fill solid
+	set boxwidth 4
+	plot 'task2_count.txt' u (floor(($2-1)/4)*4+1+4/2):1 smooth freq w boxes
