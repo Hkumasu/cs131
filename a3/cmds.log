@@ -10,4 +10,4 @@ task3: sort -n  task2.txt | uniq -c > task2_count.txt
 	set output "h4.svg"
 	set style fill solid
 	set boxwidth 4
-	plot 'task2_count.txt' u (floor(($2-1)/4)*4+1+4/2):1 smooth freq w boxes
+	plot 'task2_count.txt' u (floor($2/4)*4+4/2):1 smooth freq w boxes
