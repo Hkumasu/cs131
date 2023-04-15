@@ -1,0 +1,21 @@
+cat randomsample.sh
+#!/bin/bash
+
+#Random=$((1 + $RANDOM % 100))
+
+line=`awk 'END{print NR}' $2`
+n=`expr $1 \* $line / 100`
+
+echo $1 # print x%
+head -n $n $2
+#echo $line
+
+./randomsample.sh $(($RANDOM % 100 + 1)) amazon_reviews_us_Books_v1_02.tsv > sample.txt
+head -n 1 sample.txt
+13 # x%
+wc -l sample.txt
+403718 sample.txt
+wc -l amazon_reviews_us_Books_v1_02.tsv
+3105521 amazon_reviews_us_Books_v1_02.tsv
+
+403718 / 3105521 = 0.13
