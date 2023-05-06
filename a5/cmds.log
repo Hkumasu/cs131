@@ -1,0 +1,28 @@
+sed 's/"//g' student_math.csv >  student_math_modified.csv
+cut -d ";" -f 14,21,33 student_math_modified.csv | sort -k 3 -t ";" -n > resource.csv
+awk -f grade.awk resource.csv > modified.csv
+cut -d " " -f 1,2 modified.csv | sort -n  > time_motivation.txt
+cut -d " " -f 1,3 modified.csv | sort -n > time_grade.txt
+cut -d " " -f 2,3 modified.csv > sort -n  motivation_grade.txt
+
+awk -f switch_12.awk time_motivation.txt > count_12.txt
+awk -f switch_13.awk time_grade.txt > count_13.txt
+awk -f switch_23.awk motivation_grade.txt > count_23.txt
+
+For gnuplot time_motivation.svg
+set terminal svg
+set output "time_motivation.svg"
+set style fill solid border lc rgb "black"
+set style histogram clustered
+plot "count_12.txt" using 2:xtic(1) with histogram title "yes",\
+     "count_12.txt" using 3 with histogram title "no"
+
+motivation_grade.svg
+plot "count_23.txt" using 2:xtic(1) with histogram title "yes",\
+     "count_23.txt" using 3         with histogram title "no"
+
+time_grade.svg
+plot "count_13.txt" using 2:xtic(1) with histogram title "Grade 0-5",\
+     "count_13.txt" using 3         with histogram title "Grade 6-10",\
+     "count_13.txt" using 4         with histogram title "Grade 11-15",\
+     "count_13.txt" using 5         with histogram title "Grade 15-20"
